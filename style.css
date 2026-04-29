@@ -1,0 +1,518 @@
+/*
+Theme Name: ИнфинИТи
+Author: Igor Blagoveshchensky
+Author URI: https://no-it.ru
+Description: A bold, modern WordPress block theme for children's digital education centers. Features a striking diagonal-split hero, deep blue and red accent palette, and confident forward-looking design.
+Version: 0.1.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: infiniti
+Tags: full-site-editing, education
+
+Copyright (C) 2024-2026 Igor Blagoveshchensky
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+*/
+
+/* === Equal Cards Layout === */
+.equal-cards > .wp-block-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+}
+
+.equal-cards > .wp-block-column > .wp-block-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.equal-cards .cta-bottom {
+  margin-top: auto;
+  justify-content: center;
+}
+
+.wp-site-blocks > footer {
+  margin-block-start: 0;
+}
+
+/* === Sticky Header === */
+.site-header-infiniti {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* === Hero Diagonal Overlay === */
+.hero-diagonal-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-diagonal-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 45%;
+  background: #ffffff;
+  clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.hero-diagonal-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 46%;
+  background: #e63946;
+  clip-path: polygon(10% 0, 13% 0, 1% 100%, -2% 100%);
+  z-index: 2;
+}
+
+/* === Grid Pattern Overlay === */
+.grid-pattern-overlay {
+  position: relative;
+}
+
+.grid-pattern-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image:
+    linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+}
+
+/* === Age Badge === */
+.age-badge-circle {
+  width: 80px;
+  height: 80px;
+  background: #e63946;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.45);
+  position: relative;
+  z-index: 5;
+}
+
+/* === Red accent corner for cards === */
+.accent-corner-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.accent-corner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: #e63946;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  z-index: 1;
+}
+
+/* === Button hover micro-interaction === */
+.wp-block-button .wp-block-button__link {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.wp-block-button .wp-block-button__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.35);
+  filter: brightness(1.08);
+}
+
+/* === Stat number styling === */
+.stat-number-display {
+  font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* === Global link styles (excluding header, footer, nav, buttons) === */
+.wp-site-blocks > main a:not(.wp-block-button__link):not(.wp-element-button),
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-element-button) {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #e63946;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.wp-site-blocks > main h1 a,
+.wp-site-blocks > main h2 a,
+.wp-site-blocks > main h3 a,
+.wp-site-blocks > main h4 a,
+.wp-site-blocks > main h5 a,
+.wp-site-blocks > main h6 a {
+  text-decoration: none !important;
+}
+
+.wp-site-blocks > main a:not(.wp-block-button__link):not(.wp-element-button):hover,
+.wp-block-post-content a:not(.wp-block-button__link):not(.wp-element-button):hover {
+  color: #e63946;
+}
+
+/* === Nav links === */
+.infiniti-nav a:not(.wp-block-button__link):not(.wp-element-button) {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.infiniti-nav a:not(.wp-block-button__link):not(.wp-element-button)::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #e63946;
+  transition: width 0.3s ease;
+}
+
+.infiniti-nav a:not(.wp-block-button__link):not(.wp-element-button):hover::after {
+  width: 100%;
+}
+
+.infiniti-nav a:not(.wp-block-button__link):not(.wp-element-button):hover {
+  color: #ffffff !important;
+}
+
+/* === Code decoration === */
+.code-deco {
+  font-family: 'Courier New', monospace;
+  opacity: 0.07;
+  pointer-events: none;
+  white-space: pre;
+  line-height: 1.8;
+}
+
+/* === Hero image red corner === */
+.hero-image-corner {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-corner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: #e63946;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  z-index: 2;
+}
+
+/* === Dot clusters === */
+.dot-cluster-subtle {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+/* === Section divider line === */
+.red-top-line {
+  position: relative;
+}
+
+.red-top-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #e63946;
+  }
+
+/* === Entrance animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeInUp 0.8s ease 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fadeInUp 0.8s ease 0.45s forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: fadeInScale 0.6s ease 0.4s forwards;
+  opacity: 0;
+}
+
+/* === Contrast: light backgrounds → dark text === */
+.has-white-background-color,
+.has-soft-white-background-color,
+.has-light-blue-background-color,
+[style*="background-color:#fff"],
+[style*="background-color:#ffffff"],
+[style*="background-color:#f4f6f9"],
+[style*="background-color:#e8eef6"] {
+  color: #1a3a6b;
+}
+
+/* === Sticky Footer === */
+.wp-site-blocks {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wp-site-blocks > main {
+  flex: 1 0 auto;
+}
+
+/* === Header overflow for mobile nav overlay === */
+.site-header-infiniti,
+.site-header-infiniti .wp-block-group,
+.infiniti-nav {
+  overflow: visible !important;
+}
+
+/* === Mobile nav fullscreen overlay === */
+.wp-block-navigation__responsive-container.is-menu-open {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  z-index: 99999 !important;
+  background-color: #122b52 !important;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+  color: #ffffff !important;
+}
+
+/* === Search toggle button === */
+.infiniti-search-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.infiniti-search-toggle:hover {
+  opacity: 1;
+}
+
+/* === Search overlay === */
+.infiniti-search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: #122b52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.infiniti-search-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.infiniti-search-overlay__inner {
+  width: 100%;
+  max-width: 640px;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.infiniti-search-overlay__close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.infiniti-search-overlay__close:hover {
+  color: #ffffff;
+}
+
+.infiniti-search-overlay__form {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.infiniti-search-overlay__input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.75rem 0;
+  outline: none;
+  transition: border-color 0.3s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.infiniti-search-overlay__input::-webkit-search-cancel-button,
+.infiniti-search-overlay__input::-webkit-search-decoration {
+  display: none;
+}
+
+.infiniti-search-overlay__input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.infiniti-search-overlay__input:focus {
+  border-bottom-color: #e63946;
+}
+
+.infiniti-search-overlay__submit {
+  background: #e63946;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.infiniti-search-overlay__submit:hover {
+  background: #d32f3d;
+  transform: translateY(-1px);
+}
+
+/* === Search drone animation === */
+.infiniti-search-drone {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.infiniti-search-drone img {
+  width: 200px;
+  height: auto;
+  animation: droneFly 4s ease-in-out infinite alternate;
+}
+
+@keyframes droneFly {
+  0% {
+    transform: translateX(-60px) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(60px) rotate(5deg);
+  }
+}
+
+.wp-block-search__button {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.wp-block-search__button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 782px) {
+  .hero-diagonal-wrapper::before,
+  .hero-diagonal-wrapper::after {
+    display: none;
+  }
+
+  .age-badge-circle {
+    width: 64px;
+    height: 64px;
+  }
+}

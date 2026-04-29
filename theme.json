@@ -1,0 +1,245 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ],
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "860px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "deep-blue",
+          "color": "#1a3a6b",
+          "name": "Deep Blue"
+        },
+        {
+          "slug": "blue-mid",
+          "color": "#2a4f8a",
+          "name": "Blue Mid"
+        },
+        {
+          "slug": "accent-red",
+          "color": "#e63946",
+          "name": "Accent Red"
+        },
+        {
+          "slug": "white",
+          "color": "#ffffff",
+          "name": "White"
+        },
+        {
+          "slug": "light-blue",
+          "color": "#e8eef6",
+          "name": "Light Blue"
+        },
+        {
+          "slug": "dark-navy",
+          "color": "#122b52",
+          "name": "Dark Navy"
+        },
+        {
+          "slug": "soft-white",
+          "color": "#f4f6f9",
+          "name": "Soft White"
+        }
+      ],
+      "gradients": [
+        {
+          "slug": "deep-navy-to-blue",
+          "gradient": "linear-gradient(135deg, #122b52 0%, #1a3a6b 50%, #2a4f8a 100%)",
+          "name": "Deep Navy to Blue"
+        },
+        {
+          "slug": "blue-to-navy",
+          "gradient": "linear-gradient(160deg, #2a4f8a 0%, #1a3a6b 100%)",
+          "name": "Blue to Navy"
+        },
+        {
+          "slug": "red-to-deep-blue",
+          "gradient": "linear-gradient(135deg, #e63946 0%, #1a3a6b 100%)",
+          "name": "Red to Deep Blue"
+        },
+        {
+          "slug": "navy-mesh",
+          "gradient": "radial-gradient(ellipse at 20% 50%, #2a4f8a 0%, #1a3a6b 50%, #122b52 100%)",
+          "name": "Navy Mesh"
+        },
+        {
+          "slug": "subtle-red-glow",
+          "gradient": "radial-gradient(circle at 80% 20%, rgba(230,57,70,0.15) 0%, #1a3a6b 70%)",
+          "name": "Subtle Red Glow"
+        },
+        {
+          "slug": "hero-diagonal",
+          "gradient": "linear-gradient(135deg, #122b52 0%, #1a3a6b 40%, #2a4f8a 80%, #1a3a6b 100%)",
+          "name": "Hero Diagonal"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "'Nunito Sans', 'Segoe UI', sans-serif",
+          "slug": "display",
+          "name": "Display"
+        },
+        {
+          "fontFamily": "'PT Mono', 'Segoe UI', Tahoma, monospace",
+          "slug": "body",
+          "name": "Body"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "size": "0.875rem",
+          "name": "Small"
+        },
+        {
+          "slug": "medium",
+          "size": "1rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.25rem",
+          "name": "Large"
+        },
+        {
+          "slug": "x-large",
+          "size": "1.75rem",
+          "name": "Extra Large"
+        },
+        {
+          "slug": "xx-large",
+          "size": "2.25rem",
+          "name": "2XL"
+        },
+        {
+          "slug": "huge",
+          "size": "clamp(2.5rem, 5vw, 3.5rem)",
+          "name": "Huge"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "em", "rem", "vh", "vw", "%"],
+      "spacingSizes": [
+        { "slug": "10", "size": "0.5rem", "name": "XS" },
+        { "slug": "20", "size": "1rem", "name": "S" },
+        { "slug": "30", "size": "1.5rem", "name": "M" },
+        { "slug": "40", "size": "2rem", "name": "L" },
+        { "slug": "50", "size": "3rem", "name": "XL" },
+        { "slug": "60", "size": "4.5rem", "name": "2XL" },
+        { "slug": "70", "size": "6rem", "name": "3XL" },
+        { "slug": "80", "size": "8rem", "name": "4XL" }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|deep-blue",
+      "text": "var:preset|color|white"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "1rem",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontWeight": "700",
+          "lineHeight": "1.15"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "clamp(2.5rem, 5vw, 3.5rem)",
+          "fontWeight": "900",
+          "letterSpacing": "-0.03em"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "2.25rem",
+          "fontWeight": "800",
+          "letterSpacing": "-0.02em"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "1.75rem",
+          "fontWeight": "700"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontSize": "1.25rem",
+          "fontWeight": "600"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|accent-red"
+        },
+        ":hover": {
+          "color": {
+            "text": "var:preset|color|white"
+          }
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|accent-red",
+          "text": "var:preset|color|white"
+        },
+        "border": {
+          "radius": "6px"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontWeight": "600",
+          "fontSize": "0.9rem",
+          "letterSpacing": "0.03em",
+          "textTransform": "uppercase"
+        }
+      }
+    },
+    "blocks": {
+      "core/navigation": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|body",
+          "fontSize": "0.9rem",
+          "fontWeight": "500"
+        },
+        "color": {
+          "text": "rgba(255,255,255,0.75)"
+        }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var:preset|font-family|display",
+          "fontWeight": "700",
+          "fontSize": "1.35rem",
+          "letterSpacing": "-0.02em"
+        }
+      }
+    }
+  }
+}
