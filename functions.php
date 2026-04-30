@@ -18,6 +18,18 @@ add_action( 'wp_footer', function () {
 	<script>
 	document.addEventListener('DOMContentLoaded',function(){var e=document.querySelector('.infiniti-current-year');e&&(e.textContent=new Date().getFullYear())});
 	</script>
+
+	<div class="infiniti-search-overlay" id="infiniti-search-overlay">
+	<button class="infiniti-search-overlay__close" aria-label="<?php esc_attr_e( 'Закрыть', 'infiniti' ); ?>" type="button">
+	<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="24" y2="24"/><line x1="24" y1="4" x2="4" y2="24"/></svg>
+	</button>
+	<div class="infiniti-search-overlay__inner">
+	<form role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="infiniti-search-overlay__form">
+	<input type="search" name="s" placeholder="<?php esc_attr_e( 'Введите запрос...', 'infiniti' ); ?>" class="infiniti-search-overlay__input" autocomplete="off" />
+	<button type="submit" class="infiniti-search-overlay__submit"><?php esc_html_e( 'Искать', 'infiniti' ); ?></button>
+	</form>
+	</div>
+	</div>
 	<?php
 } );
 

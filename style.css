@@ -1,8 +1,9 @@
 /*
 Theme Name: ИнфинИТи
+Theme URI: https://github.com/igor-blag/infiniti
 Author: Igor Blagoveshchensky
 Author URI: https://no-it.ru
-Description: A bold, modern WordPress block theme for children's digital education centers. Features a striking diagonal-split hero, deep blue and red accent palette, and confident forward-looking design.
+Description: A bold WordPress block theme designed for children's digital education centers. Features a striking diagonal-split hero, deep blue and red accent palette, sticky header, fullscreen search overlay, and responsive layout. Built for Full Site Editing with custom patterns for programs, advantages, and call-to-action sections. Demo: https://infiniti.no-it.ru
 Version: 0.1.0
 Requires at least: 6.4
 Tested up to: 6.8
@@ -359,21 +360,48 @@ the Free Software Foundation; either version 2 of the License, or
   color: #ffffff !important;
 }
 
-/* === Search toggle button === */
-.infiniti-search-toggle {
-  background: none;
-  border: none;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 4px;
-  display: flex;
+/* === Header search: icon-only === */
+.infiniti-header-search {
+  display: flex !important;
   align-items: center;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
 }
 
-.infiniti-search-toggle:hover {
+.infiniti-header-search .wp-block-search__inside-wrapper {
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.infiniti-header-search .wp-block-search__input {
+  width: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.infiniti-header-search .wp-block-search__button {
+  background: none !important;
+  border: none !important;
+  padding: 4px !important;
+  color: #ffffff !important;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.infiniti-header-search .wp-block-search__button:hover {
   opacity: 1;
+}
+
+.infiniti-header-search .wp-block-search__button svg {
+  min-width: 20px;
+  min-height: 20px;
 }
 
 /* === Search overlay === */

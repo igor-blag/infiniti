@@ -11,6 +11,6 @@ add_action( 'after_setup_theme', function () {
 } );
 
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'telex-theme-style', get_stylesheet_uri(), [], wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'infiniti-style', get_stylesheet_uri(), [], wp_get_theme()->get( 'Version' ) );
 	wp_enqueue_script( 'infiniti-search-overlay', get_template_directory_uri() . '/search-overlay.js', [], wp_get_theme()->get( 'Version' ), true );
 } );

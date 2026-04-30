@@ -2,12 +2,14 @@
 
 ## Project Overview
 
-**ИнфинИТи** is an open-source WordPress block theme for children's digital education centers. Features a bold diagonal-split hero, deep blue and red accent palette, and confident forward-looking design.
+**ИнфинИТи** is an open-source WordPress block theme for children's digital education centers — centers that teach programming, robotics, 3D modeling, and digital creativity to school students aged 7–17. Features a bold diagonal-split hero, deep blue and red accent palette, and confident forward-looking design.
 
 - **License:** GPLv2 or later
 - **Requires WordPress:** 6.4+
 - **Requires PHP:** 7.4+
 - **Text Domain:** `infiniti`
+- **Demo:** https://infiniti.no-it.ru
+- **Repository:** https://github.com/igor-blag/infiniti
 
 ## Demo Content
 
@@ -49,9 +51,13 @@ For Studio CLI usage and constraints (SQLite, `studio wp` prefix, etc.), see [`/
 
 Target: WordPress.org theme directory. Before submission:
 
-- [ ] `readme.txt` with changelog
-- [ ] Theme passes Theme Check plugin
-- [ ] All strings internationalized (`__()`, `_e()`, etc.)
-- [ ] No `.DS_Store` or other dev artifacts
-- [ ] Verify all templates render correctly
+- [x] `readme.txt` with changelog and Resources section
+- [x] Copyright notice in `style.css`
+- [x] Theme passes Theme Check plugin
+- [x] All strings internationalized (`__()`, `_e()`, etc.)
+- [x] All handles properly prefixed (`infiniti-`)
+- [x] No `.DS_Store` or other dev artifacts
+- [x] `screenshot.png` (1200x900, 4:3 ratio)
+- [x] Verify all templates render correctly
 - [ ] Test demo content script on clean install
+- [ ] Confirm image licensing for Resources section
