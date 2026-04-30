@@ -163,6 +163,14 @@ the Free Software Foundation; either version 2 of the License, or
   transition: color 0.2s ease;
 }
 
+.wp-site-blocks > main .wp-block-navigation .wp-block-navigation-item a,
+.wp-block-post-content .wp-block-navigation .wp-block-navigation-item a {
+  color: #1a3a6b !important;
+  text-decoration: underline;
+  text-decoration-color: #e63946;
+  text-underline-offset: 2px;
+}
+
 .wp-site-blocks > main h1 a,
 .wp-site-blocks > main h2 a,
 .wp-site-blocks > main h3 a,
@@ -357,6 +365,14 @@ the Free Software Foundation; either version 2 of the License, or
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+  color: #ffffff !important;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__submenu-container {
+  background: transparent !important;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle {
   color: #ffffff !important;
 }
 

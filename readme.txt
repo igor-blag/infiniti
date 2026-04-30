@@ -66,4 +66,4 @@ Yes, all functionality works correctly in a WordPress multisite environment.
 * Nunito Sans font — Copyright 2014 The Nunito Sans Project Authors, SIL Open Font License 1.1, https://fonts.google.com/specimen/Nunito+Sans
 * PT Mono font — Copyright 2010 ParaType Ltd., SIL Open Font License 1.1, https://fonts.google.com/specimen/PT+Mono
 * Theme screenshot and demo images — Copyright Igor Blagoveshchensky, GPLv2 or later.
-* Hero photo, drone image, and all assets/ images — Copyright Igor Blagoveshchensky, GPLv2 or later.
+* Hero photo, drone image, logo, and all assets/ images — Copyright Igor Blagoveshchensky, GPLv2 or later.
