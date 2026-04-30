@@ -61,3 +61,18 @@ Target: WordPress.org theme directory. Before submission:
 - [x] Verify all templates render correctly
 - [ ] Test demo content script on clean install
 - [ ] Confirm image licensing for Resources section
+
+## Roadmap
+
+Ideas for future releases to improve the theme quality and reach:
+
+- [ ] More `register_block_style` variations (e.g. shadow cards, rounded overlays)
+- [ ] `accessibility-ready` tag — pass [additional accessibility requirements](https://make.wordpress.org/themes/handbook/review/accessibility/)
+- [ ] Additional templates: `author.html`, `category.html`, `tag.html`
+- [ ] RTL stylesheet support (`rtl.css`)
+- [ ] Editor-only styles for better Site Editor UX (`.editor-styles-wrapper`)
+- [ ] More block patterns (team section, pricing table, testimonials)
+- [ ] Wide/full-width pattern variations
+- [ ] Dark mode support via `prefers-color-scheme`
+- [ ] Custom 404 page with search and suggested links pattern
+- [ ] Theme preview improvements for WordPress.org directory

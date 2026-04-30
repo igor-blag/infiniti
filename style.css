@@ -1,9 +1,9 @@
 /*
-Theme Name: ИнфинИТи
+Theme Name: Infiniti
 Theme URI: https://github.com/igor-blag/infiniti
 Author: igb7
 Author URI: https://no-it.ru
-Description: A bold WordPress block theme designed for children's digital education centers. Features a striking diagonal-split hero, deep blue and red accent palette, sticky header, fullscreen search overlay, and responsive layout. Built for Full Site Editing with custom patterns for programs, advantages, and call-to-action sections. Demo: https://infiniti.no-it.ru
+Description: ИнфинИТи — a bold WordPress block theme designed for children's digital education centers (programming, robotics, 3D modeling, digital creativity for students aged 7–17). Features a striking diagonal-split hero, deep blue and red accent palette, sticky header, fullscreen search overlay, and responsive layout. Built for Full Site Editing with custom patterns for programs, advantages, and call-to-action sections. Demo: https://infiniti.no-it.ru
 Version: 0.1.0
 Requires at least: 6.4
 Tested up to: 6.8
@@ -14,10 +14,15 @@ Text Domain: infiniti
 Tags: full-site-editing, education
 
 Copyright (C) 2024-2026 Igor Blagoveshchensky
-This program is free software; you can redistribute it and/or modify
+Infiniti is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+
+Infiniti is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 */
 
 /* === Equal Cards Layout === */
