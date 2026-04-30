@@ -1,5 +1,5 @@
 === ИнфинИТи ===
-Contributors: igor-blag
+Contributors: igb7
 Theme URI: https://github.com/igor-blag/infiniti
 Requires at least: 6.4
 Tested up to: 6.8

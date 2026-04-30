@@ -219,7 +219,8 @@
           "letterSpacing": "0.03em",
           "textTransform": "uppercase"
         }
-      }
+      },
+      "css": "where(.wp-site-blocks) { overflow-wrap: break-word; }"
     },
     "blocks": {
       "core/navigation": {
